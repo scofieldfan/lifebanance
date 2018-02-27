@@ -1,0 +1,205 @@
+/**
+ 对应样式变量
+*/
+
+@import "mixin";
+@import "variable";
+
+
+*,
+:after,
+:before {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    -webkit-text-size-adjust: none;
+    box-sizing: border-box;
+    font-size: 16px;
+    min-height: 100%;
+    background-color: #f8f8f8;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+li {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none
+}
+
+input,
+button,
+textarea {
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+    background: transparent;
+    -webkit-appearance: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+
+/*common*/
+
+.clearfix:after {
+    clear: both;
+    content: "\200B";
+    display: block;
+    height: 0;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.log {
+    display: none;
+    background-color: #000;
+    color: #fff;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #CDCDCD;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#CDCDCD;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#CDCDCD;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:#CDCDCD;
+}
+
+
+/*element-ui 样式覆写*/
+@el-color: #C6000D;
+body,
+button,
+input,
+select,
+textarea {
+    /* font-family: "Microsoft YaHei" ! important; */
+    font: 12px/1.14 "PingFang SC", "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif ! important;
+}
+
+.el-button--primary,
+.el-switch__input:checked+.el-switch__core,
+.el-checkbox__input.is-checked .el-checkbox__inner,
+.el-checkbox__input.is-indeterminate .el-checkbox__inner,
+.el-pager li.active,
+.el-radio__input.is-checked .el-radio__inner {
+    background-color: @el-color;
+    border-color: @el-color;
+}
+
+.el-menu--horizontal.el-menu--dark .el-submenu .el-menu-item.is-active,
+.el-menu-item.is-active,
+.el-date-table td.today,
+.el-pager li:hover,
+.help,
+.el-loading-spinner .el-loading-text,
+.el-dialog__close:hover,
+.el-tabs__item.is-active {
+    color: #7ED321;
+}
+
+.el-radio__inner:hover {
+    border-color: @el-color;
+}
+
+.el-pagination__sizes .el-input .el-input__inner:hover {
+    border-color: @el-color;
+}
+.el-select .el-input__inner:focus {
+    border-color: #7ED321;
+}
+.el-input__inner {
+    height: 30px;
+}
+.el-radio__input.is-checked+.el-radio__label {
+    color: #2B4342;
+}
+.el-dialog {
+    border-radius: 10px;
+}
+.el-dialog--center .el-dialog__header {
+    border-bottom: 1px solid #CBCBCB;
+    padding: 24px 0 19px;
+}
+.el-dialog__headerbtn {
+    top: 24px;
+}
+.el-message-box {
+    border-radius: 10px;
+    min-width: 500px;
+    .el-message-box__header {
+        padding: 15px 15px 10px;
+        border-bottom: 1px solid #CBCBCB;
+        .el-message-box__title {
+            font-size: 12px;
+            color: #515151;
+            .el-message-box__status {
+                display: none;
+            }
+        }
+        .el-message-box__headerbtn {
+            top: 10px;
+        }
+    }
+    .el-message-box__content {
+        font-size: 18px;
+        color: #515151;
+        padding-top: 44px;
+        padding-bottom: 44px;
+    }
+    .el-message-box__btns {
+        padding: 5px 25px 0;
+        .el-button--default {
+            width: 205px;
+            height: 50px;
+            font-size: 18px;
+            float: right;
+            border: 1px solid #515151;
+            &.el-button:hover {
+                color: #515151;
+                background: #fff;
+            }
+        }
+        .el-button--primary {
+            float: left;
+            background: #515151;
+            color: #fff;
+            &.el-button:hover {
+                color: #fff;
+                background: #515151;
+            }
+        }
+    }
+}

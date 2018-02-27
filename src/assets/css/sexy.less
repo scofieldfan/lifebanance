@@ -1,0 +1,70 @@
+.experience-app {
+    width: 100%;
+    .but-box{
+        display:flex;
+        .but-upload{
+            .flex(1);
+        }
+        .but-upload-random {
+            margin-left:16px;
+        }
+    }
+    font-size: 14px;
+    color: #999999;
+    .imglist{
+        background: #FFFFFF;
+        border-radius: 3px;
+        padding: 20px 20px 24px;
+        text-align: center;
+        .upload-ti{
+            margin:11px 0 24px;
+        }
+    }
+    .foot-but{
+        margin: 22px 0;
+        .foot-but-left {
+            margin-right:28px;
+        }
+    }
+}
+@media screen and (max-width: @mobileWidth) {
+    html, body{
+        overflow: visible;
+    }
+    .sexy {
+        padding: 0px;
+        .but-box{
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            bottom: 0;
+            z-index: @maxZindex + 2;
+            .but-upload{
+                width: 50%;
+            }
+            .but-upload-random {
+                width: 50%;
+                margin-left:0px;
+            }
+        }
+        .foot-but {
+            position: -webkit-sticky;
+            position: sticky;
+            bottom: 0;
+            z-index: @maxZindex + 1;
+            .foot-but-left,.foot-but-right  {
+                width: 50%;
+                margin-right: 0px;
+            }
+        }
+        .imglist {
+            padding: 20px 20px 0 20px;
+            .upload-con {
+                display: none;
+            }
+            .upload-ti {
+                display: none;
+            }
+        }
+    }
+}
